@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            custumDarkCyan: "hsl(158, 36%, 37%)",
+            customCream: "hsl(30, 38%, 92%)",
+            customDarkBlue: "hsl(158, 36%, 37%)",
+            customDarkGrayBlue: "hsl(0, 0%, 59%)",
+            customWhite: "hsl(0, 0%, 100%)"
+          },
+          letterSpacing: {
+            'accurate': '0.4em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 50%, 25%);
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+    @layer utilities {
+      .font-montserrat {
+        font-family: 'Montserrat', sans-serif;
+      }
+       .font-franunces{
+        font-family: 'Fraunces', serif;}
+        
+        /* .custom-dark-blue{
+          color: hsl(212, 21%, 14%);
+        }
+
+        .custom-greyish-blue{
+          color: hsl(228, 12%, 48%);
+        } */
+
+    }
+  </style>
+</head>
+
+<body class="bg-customCream ">
+
+  <main class="flex justify-center mt-20">
+    <div class="font-montserrat w-4/5  lg:w-1/2 lg:grid lg:grid-cols-2 lg:gap-2  bg-customWhite rounded-lg">
+
+      <div>
+        <img src="/images/image-product-desktop.jpg" class="w-100 hidden lg:block " alt="">
+        <img src="/images/image-product-mobile.jpg" class="w-100 lg:hidden rounded-t-lg" alt="">
+      </div>
+      <div class="px-5 py-6">
+        
+        <h2 class="my-3 uppercase font-montserrat text-customDarkGrayBlue tracking-accurate">Perfume</h2>
+        
+        <h1 class=" font-franunces font-black text-3xl md:text-4xl lg:text-5xl">Gabrielle Essence Eau De Parfum</h1>
+        
+        <p class="text-sm text-customDarkGrayBlue font-montserrat leading-5 py-4">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <div class=" grid grid-cols-2 mb-10">
+          <div class="text-4xl text-customDarkBlue font-franunces font-black">
+            $149.99
+          </div>
+          <div class="mt-2 line-through text-customDarkGrayBlue">
+            $169.99
+          </div>
+  
+        </div>
+        <div class="flex justify-center">
+          <button class="flex justify-center bg-customDarkBlue w-full py-3 rounded-md text-white font-montserrat font-semibold">
+            <img src="/images/icon-cart.svg" class="mr-2 mt-1" alt="">     
+            Add to Cart
+          </button>
+        </div>        
+        
+      </div>
+
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.github.com/codesmiles">Michael codesmile</a>.
+  </div>
+</body>
+
+</html>
